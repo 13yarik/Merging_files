@@ -10,7 +10,7 @@ def files_open(file_names):
         # проходим по отсортированному списку и записываем содержимое файлов в результирующий файл
         for f_name, num_lines, file_lines in sorted_files_data:
             out_file.write(f"{f_name}\n{num_lines}\n")  # записываем информацию о файле
-            for l_index, line in enumerate(file_lines):
+            for line in file_lines:
                 out_file.write(f"{line}\n")  # записываем строки файла и символ перевода строки
 
 file_names_list = files_open(['1.txt', '2.txt'])
